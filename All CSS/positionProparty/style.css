@@ -1,0 +1,20 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#Maindiv{
+background: blue;
+align-items: center;
+
+}
+#links{
+    
+
+}
+button{
+    position: fixed;
+    background: red;
+    bottom: 40px;
+    right: 40px;
+}

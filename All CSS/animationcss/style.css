@@ -1,0 +1,133 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.headingdiv {
+  border: 2px solid black;
+  width: 200px;
+  padding: 10px;
+  margin: 12px;
+  /* transition: all 5s linear; */
+}
+.headingdiv:hover {
+  color: white;
+  background: red;
+
+  width: 100%;
+  transition: all 5s linear;
+}
+span {
+  border-bottom: 3px solid black;
+  width: 100%;
+  display: block;
+}
+.outerdiv {
+  margin: 10px;
+  height: 60px;
+  width: 500px;
+  border: 2px solid black;
+}
+.innerdiv {
+  width: 10px;
+  height: 57px;
+  background: red;
+}
+.outerdiv:hover {
+  .innerdiv {
+    width: 498px;
+    background: blue;
+    transition: all 5s;
+  }
+}
+
+.outer {
+  margin: 10px;
+  height: 60px;
+  width: 500px;
+  border: 2px solid black;
+}
+.inner {
+  background: red;
+  width: 12px;
+  height: 58px;
+}
+.outer {
+  .inner {
+    width: 498px;
+    transition: all 5s;
+    animation: nothing 5s infinite;
+  }
+}
+
+@keyframes nothing {
+  0% {
+    width: 0%;
+    background: orange;
+  }
+  40% {
+    width: 40%;
+    background: blue;
+  }
+  70% {
+    width: 70%;
+    background: green;
+  }
+  100% {
+    width: 100%;
+    background: purple;
+  }
+}
+
+.square {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  border: 2px solid;
+  position: relative;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  /* background: red; */
+  animation: abc 9s linear infinite;
+  position: absolute;
+  transform: rotate(1800deg);
+  #img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes abc {
+  0% ,100%{
+    /* transform: translate(0, 0); */
+    top: 0px;
+    left: 0px;
+    /* background: blue; */
+    /* transform: rotate(180deg); */
+    transition: transform 1s;
+  }
+  25% {
+    top: 370px;
+    left: 0px;
+    /* background: red; */
+        transform: rotate(120deg);
+
+  }
+  50% {
+    /* transform: translate(370px, 370px); */
+    top: 370px;
+    left: 370px;
+    /* background: yellow; */
+
+  }
+  75% {
+    /* transform: translate(0, 370px);
+     */
+     top:0px;
+     left: 370px;
+    /* background: green; */
+  }
+}

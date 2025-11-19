@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basicFrom</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"/>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+
+  <body
+    class="bg-primary h-100 d-flex justify-content-center align-items-center">
+    <div class="w-25 h-50 bg-white border-2 border rounded-4">
+      <h2 class="m-lg-3">
+        <span class="border-bottom border-5 border-primary">Lo</span><span>gin</span>
+      </h2>
+
+
+      <div class="ps-lg-5 border-bottom border-3 m-4 ms-5" style="width: 300px">
+        <span class="position-absolute" style="left: 635px; top: 282px">
+          <i class="bi bi-envelope"></i>
+        </span>
+
+        
+        <input
+          type="email"
+          id="email"
+          class="border-0 shadow-none form-control"
+          placeholder="Entre your email"/>
+      </div>
+
+      <div class="ps-lg-5 border-bottom border-3 m-4 ms-5" style="width: 300px">
+        <span class="position-absolute" style="left: 635px; top: 345px">
+          <i class="bi bi-lock-fill"></i>
+        </span>
+
+        <input
+          type="password"
+          id="password"
+          class="border-0 shadow-none form-control"
+          placeholder="confirm a password"
+        />
+        <span>
+           <i
+            class="bi bi-eye position-absolute"
+            style="left: 910px; top: 348px">
+            </i>
+        </span>
+      </div>
+      <div class="ms-5 mb-3 d-flex gap-5">
+        <div><input type="checkbox" id="chekbox" /> remember me</div>
+        <div class="text-primary">
+          <a href="" id="forgetpassword" class="text-decoration-none"
+            >Forget password?</a>
+
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button id="button" class="form-control bg-primary text-white w-75" onClick="login()">
+          Login now
+        </button>
+      </div>
+
+      <p class="d-flex justify-content-center m-5">
+        Dont't have an account?<span class="text-primary">
+          <a href="" id="sigup" class="text-decoration-none"
+            >signup now</a
+          ></span
+        >
+      </p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
+    
+    <script src="link.js"></script>
+  </body>
+</html>

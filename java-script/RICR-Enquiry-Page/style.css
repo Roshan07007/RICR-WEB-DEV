@@ -1,0 +1,32 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: rgb(0, 0, 12%);
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+
+
+  
+}
+.logo {
+  width: 170px;
+  height: 50px;
+  margin-left: 50px;
+}
+#header1{
+    position: relative;
+    left: 130px;
+    
+}
+.h1{
+    margin: 15px;
+    font-size: 20px;
+    
+}

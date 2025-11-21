@@ -43,9 +43,8 @@
   top: -5px;
   font-size: larger;
 }
-.btn1:hover{
-
-  background: #EAF8FE;
+.btn1:hover {
+  background: #eaf8fe;
   color: black;
 }
 
@@ -196,11 +195,6 @@
   color: black;
   transition: all 0.4s linear;
 }
-.futer{
-
-  width: 500px;
-  height: 500px;
-  background: red;
 
 
-}
+

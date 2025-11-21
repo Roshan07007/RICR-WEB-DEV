@@ -29,7 +29,7 @@ function submit() {
   console.log(l);
   console.log(m);
 
-  alert("done submit");
+  alert("submit done");
 
   document.getElementById("username").value = "";
   document.getElementById("usernumber").value = "";

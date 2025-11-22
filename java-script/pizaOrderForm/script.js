@@ -20,7 +20,9 @@ function login() {
   console.log(radio2);
   console.log(radio2);
   console.log(radi);
-  console.log(pu);
+  console.log(pu!
+    
+  );
 
   alert("submit done");
 

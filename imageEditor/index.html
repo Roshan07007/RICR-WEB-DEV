@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div
+        class="container-fluid p-2 bg-primary text-white px-3 text-center display-6 fw-bold"
+      >
+        Image editor
+      </div>
+    </header>
+    <main>
+      <div
+        class="mx-3 border-1 border border-primary gap-3 d-flex"
+        id="content"
+      >
+        <div class="border-danger w-25 border">side menu</div>
+        <div
+          class="border-success w-75 border d-flex justify-content-center align-items-center"
+          id="workspace"
+        >
+          <img
+            src=""
+            class="border object-fit-contain"
+            alt="working image"
+            id="image"
+          />
+          <label for="upload" id="labelID" class="btn btn-outline-primary">
+            <i class="bi bi-camera"></i> upload image</label
+          >
+          <input
+            id="upload"
+            class="d-none"
+            type="file"
+            onchange="upimage()"
+            accept="image/*"
+          />
+        </div>
+      </div>
+    </main>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>

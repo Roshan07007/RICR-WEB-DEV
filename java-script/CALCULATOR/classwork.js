@@ -20,6 +20,8 @@ function changepara(val) {
 }
 
 
+
+
 // function rr(){
 //     alert("jchbaqdiyv")
 //     const paragraph = document.getElementById("bg");

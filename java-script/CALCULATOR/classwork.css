@@ -1,0 +1,51 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.div1 {
+  width: 70%;
+  height: 300px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  
+  /* align-items: center; */
+
+  margin: 12px;
+}
+.lorem {
+  position: absolute;
+  top: 120px;
+}
+
+.div2 {
+  width: 60%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  border: 2px solid black;
+}
+.h2 {
+  margin-top: 15px;
+}
+.color1 {
+  position: absolute;
+  right: 500px;
+  top: 30px;
+}
+
+.color2 {
+  position: absolute;
+  right: 510px;
+  top: 100px;
+}
+
+.color3 {
+  position: absolute;
+  right: 520px;
+  top: 170px;
+}

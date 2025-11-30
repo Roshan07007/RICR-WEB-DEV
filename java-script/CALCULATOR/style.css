@@ -28,7 +28,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 0px; */
 }
 
 .inner {
@@ -120,7 +120,7 @@ body {
 }
 
 .top-gap {
-  height: 10px;
+  height: 60px;
   width: 100%;
 }
 

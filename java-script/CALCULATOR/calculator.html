@@ -13,36 +13,43 @@
 
         <div class="inner">
           <div class="inner-frame">
-            <div class="display" id="display"></div>
-
-            <div class="pad">
-              <button class="hover1 btn smalltxt">7</button>
-              <button class="hover1 btn smalltxt">8</button>
-              <button class="hover1 btn smalltxt">9</button>
-              <button class="hover1 btn smalltxt op">/</button>
-
-              <button class="hover1 btn smalltxt">4</button>
-              <button class="hover1 btn smalltxt">5</button>
-              <button class="hover1 btn smalltxt">6</button>
-              <button class="hover1 btn smalltxt op">*</button>
-
-              <button class="hover1 btn smalltxt">1</button>
-              <button class="hover1 btn smalltxt">2</button>
-              <button class="hover1 btn smalltxt">3</button>
-              <button class="hover1 btn smalltxt op">-</button>
-
-              <button class="hover1 btn smalltxt">.</button>
-              <button class="hover1 btn smalltxt">0</button>
-              <button class="hover1 btn smalltxt">+</button>
-              <button class="hover1 btn clear">C</button>
-            </div>
+            <input
+              type="text"
+              class="display"
+              name="display"
+              id="display" 
+              placeholder="0"/>
           </div>
 
-          <div class="equal-wrap">
-            <button class="hover1 btn equal">=</button>
+          <div class="pad">
+            <button class="hover1 btn smalltxt" onclick="input('7')">7</button>
+            <button class="hover1 btn smalltxt" onclick="input('8')">8</button>
+            <button class="hover1 btn smalltxt" onclick="input('9')">9</button>
+            <button class="hover1 btn smalltxt op" onclick="input('/')">/</button>
+
+            <button class="hover1 btn smalltxt" onclick="input('4')">4</button>
+            <button class="hover1 btn smalltxt" onclick="input('5')">5</button>
+            <button class="hover1 btn smalltxt" onclick="input('6')">6</button>
+            <button class="hover1 btn smalltxt op" onclick="input('*')">*</button>
+
+            <button class="hover1 btn smalltxt" onclick="input('1')">1</button>
+            <button class="hover1 btn smalltxt" onclick="input('2')">2</button>
+            <button class="hover1 btn smalltxt" onclick="input('3')">3</button>
+            <button class="hover1 btn smalltxt op" onclick="input('7')">-</button>
+
+            <button class="hover1 btn smalltxt" onclick="input('.')">.</button>
+            <button class="hover1 btn smalltxt" onclick="input('0')">0</button>
+            <button class="hover1 btn smalltxt" onclick="input('+')">+</button>
+            <button class="hover1 btn clear" onclick="input('c')">C</button>
           </div>
+        </div>
+
+        <div class="equal-wrap">
+          <button class="hover1 btn equal" onclick="input('=')">=</button>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

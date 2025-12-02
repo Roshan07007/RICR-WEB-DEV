@@ -21,7 +21,7 @@
       <div
         class="container-fluid p-2 bg-primary text-white px-3 text-center display-6 fw-bold"
       >
-        Image editor
+        Image Editor
       </div>
     </header>
     <main>
@@ -29,7 +29,198 @@
         class="mx-3 border-1 border border-primary gap-3 d-flex"
         id="content"
       >
-        <div class="border-danger w-25 border">side menu</div>
+        <div class="border-danger w-25 border overflow-scroll">
+          <!-- brit -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="brightness"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="changebrightness()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Brightness</div>
+              <span>100</span>
+            </div>
+          </div>
+
+          <!-- contrast -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="Contrast"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Contrast()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Contrast</div>
+
+              <span>100</span>
+            </div>
+          </div>
+
+          <!-- grayscal -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="Grayscale"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Grayscale()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Grayscale(%)</div>
+
+              <span>100</span>
+            </div>
+          </div>
+          <!-- sepia-->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="Sepia"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Sepia()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Sepia(%)</div>
+
+              <span>100</span>
+            </div>
+          </div>
+          <!-- saturate -->
+
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="Saturate"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Saturate()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Saturate(value)</div>
+
+              <span>100</span>
+            </div>
+          </div>
+          <!--  Hua rotate -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="rotate"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="rotate()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Hue rotate</div>
+
+              <span>100</span>
+            </div>
+          </div>
+          <!-- blur -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="Blur"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Blur()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Blur</div>
+
+              <span>100</span>
+            </div>
+          </div>
+
+          <!-- invert -->
+          <div class="shadow me-3 ms-3 mt-3 p-3 rounded-3">
+            <label
+              for="brightness"
+              class="fw-bold d-flex justify-content-center"
+            ></label>
+            <input
+              type="range"
+              id="invert"
+              min="0 "
+              max="100"
+              value="50"
+              onchange="Invert()"
+              class="form-range p-3 w-75 ms-5"
+            />
+
+            <div class="me-5 ms-5 d-flex justify-content-between">
+              <span>0</span>
+              <div class="fw-bold">Invert</div>
+
+              <span>100</span>
+            </div>
+          </div>
+          <!-- end -->
+           <div><button class="btn  w-100  btn-primary">download</button></div>
+          <!-- button dow -->
+        </div>
         <div
           class="border-success w-75 border d-flex justify-content-center align-items-center"
           id="workspace"
@@ -48,9 +239,8 @@
             class="d-none"
             type="file"
             onchange="upimage()"
-            accept="image/*"
-          />
-        </div>
+            accept="image/*"/>
+          </div>
       </div>
     </main>
 

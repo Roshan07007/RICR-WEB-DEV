@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="bulb1" id="colorBulb">Bulb</div>
+
+    <div class="flex">
+      <div class="color" id="red"></div>
+      <div class="color1" id="blue"></div>
+      <div class="color2" id="pink" ></div>
+      <div class="color3"   id="yellow"></div>
+      <div class="color4"></div>
+    </div>
+
+    <hr />
+
     <div id="bulb"></div>
     <div class="button">
-
-        <input type="color">
+      <input type="color" />
       <button class="button1" onclick="on()">on</button>
       <button class="button1" onclick="off()">off</button>
 
@@ -18,11 +29,9 @@
       <button class="buttonbalck" onclick="balck()">balck</button>
     </div>
 
-    <hr>
-    <hr>
-    <div class="bulb2" id="smartbtn">
-     
-    </div>
+    <hr />
+
+    <div class="bulb2" id="smartbtn"></div>
     <button onclick="smartBulb()" id="smartbtn">On</button>
 
     <script src="script.js"></script>

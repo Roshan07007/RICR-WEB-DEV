@@ -13,20 +13,17 @@ function balck() {
   document.getElementById("bulb").style.background = "black";
 
   const color = document.getElementById("color");
-
 }
 
 function smartBulb() {
   const btn = document.getElementById("smartbtn");
-//   document.getElementById("smartBulb").classList.toggle("on");
+  //   document.getElementById("smartBulb").classList.toggle("on");
   if (btn.innerText === "On") {
     document.getElementById("smartbtn").innerText = "Off";
   } else {
     document.getElementById("smartbtn").innerText = "On";
   }
 }
-
-
 
 const colorBulb = document.getElementById("colorBulb");
 

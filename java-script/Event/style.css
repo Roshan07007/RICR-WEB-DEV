@@ -37,6 +37,30 @@
 .flex {
   display: flex;
 }
+.color5 {
+  border: 1px solid black;
+  background: blue;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 5px;
+}
+.color4 {
+  border: 1px solid black;
+  background: orange;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 5px;
+}
+.color5 {
+  border: 1px solid black;
+  background: pink;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 5px;
+}
 .color2 {
   border: 1px solid black;
   background: green;
@@ -47,7 +71,7 @@
 }
 .color4 {
   border: 1px solid black;
-  background: yellow;
+  background: orange;
   width: 40px;
   height: 40px;
   border-radius: 100%;

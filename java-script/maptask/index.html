@@ -1,118 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./_src/logoMap.png" />
+    <title>Map & State</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header
+      class="d-flex justify-content-center px-5 align-items-center bg-primary mb-2 py-2 justify-content-sm-between"
+    >
+      <h2 class="text-center text-white">India Map</h2>
+      <ul class="list-unstyled gap-4 my-auto d-none d-sm-flex">
+        <li>
+          <button class="btn btn-danger" onclick="clearAll()">Clear All</button>
+        </li>
+        <li>
+          <button class="btn btn-success" onclick="add()">Add All</button>
+        </li>
+      </ul>
+    </header>
+    <div class="box">
+      <div class="container d-flex mb-4 mt-5">
+        <div id="parent" class="">
+          <select name="state" id="state" onchange="search()" class="">
+            <option value="-">---Select---</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center"
+        id="div"
+        style="position: relative"
+      >
+        <img src="./Map.jpg" alt="" id="img" />
+        <!-- <div style="position: absolute; top: 35%; left: 75%">⛳️</div> -->
+      </div>
+      <div class="small">
+        <ul
+          class="list-unstyled justify-content-around my-auto d-flex d-sm-none"
+        >
+          <li>
+            <button class="btn btn-danger" onclick="clearAll()">
+              Clear All
+            </button>
+          </li>
+          <li>
+            <button class="btn btn-success" onclick="add()">Add All</button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>India Static Map Search</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
-
-    #topbar {
-      padding: 10px;
-      background: #0e4d92;
-      color: white;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    #searchInput {
-      padding: 8px;
-      width: 250px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #searchBtn {
-      padding: 8px 15px;
-      background: white;
-      color: #0e4d92;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div id="topbar">
-    <strong>Search MP City:</strong>
-    <input type="text" id="searchInput" placeholder="Enter MP city name (e.g., Bhopal, Indore)" />
-    <button id="searchBtn">Search</button>
-  </div>
-
-  <div id="map"></div>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <script>
-    const imageBounds = [
-      [6.0, 68.0],
-      [37.0, 97.0]
-    ];
-
-    const map = L.map("map", {
-      crs: L.CRS.EPSG4326,
-      minZoom: 4,
-      maxZoom: 10
-    }).setView([22.0, 78.0], 5);
-
-    L.imageOverlay("Map.jpg", imageBounds).addTo(map);
-
-    let marker = null;
-
-    async function searchCity(city) {
-      const url =
-        "https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=in&q=" +
-        encodeURIComponent(city);
-
-      const response = await fetch(url);
-      const data = await response.json();
-
-      if (data.length === 0) {
-        alert("City not found!");
-        return;
-      }
-
-      const lat = parseFloat(data[0].lat);
-      const lon = parseFloat(data[0].lon);
-
-      if (marker) map.removeLayer(marker);
-
-      marker = L.marker([lat, lon]).addTo(map);
-      marker.bindPopup(`<b>${city}</b><br>Lat: ${lat}<br>Lon: ${lon}`).openPopup();
-
-      map.setView([lat, lon], 7);
-    }
-
-    document.getElementById("searchBtn").addEventListener("click", () => {
-      const city = document.getElementById("searchInput").value;
-      searchCity(city);
-    });
-
-    document.getElementById("searchInput").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        const city = document.getElementById("searchInput").value;
-        searchCity(city);
-      }
-    });
-  </script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,43 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.perent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 800px;
+  height: 400px;
+  background: red;
+  border-radius: 1rem;
+  background-image: url(./images\ \(2\).jpg);
+  background-size: cover;
+  animation: animation 20s linear  infinite;
+
+}
+
+
+@keyframes animation {
+0%{
+    background-image: url(./images\ \(3\).jpg);
+}
+20%{
+        background-image: url(./Screenshot\ \(50\).png);
+
+
+}
+
+50%{
+    background-image: url(./images\ \(2\).jpg);
+}
+90%{
+    background-image: url(.//5f9a081aa3259242e6aad3acdf3fd372.jpg
+}
+    
+}
+
+

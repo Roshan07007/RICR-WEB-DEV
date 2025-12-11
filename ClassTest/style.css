@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+  /* font-family: "Poppins", sans-serif; */
+}
+.custom-shape-divider-bottom-1765278530 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1765278530 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 266px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1765278530 .shape-fill {
+    fill: #FFFFFF;
+}
+body {
+  background: #f8f9fa;
+}
+.about-section {
+padding: 60px 0;
+}
+.profile-img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 4px solid #0d6efd;
+}
+.card {
+border-radius: 15px;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0d6efd;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+.btn {
+  background: #0d6efd;
+  padding: 10px 25px;
+  color: #090909;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0c66ed;
+}
+
+/* Courses */
+#courses {
+  padding: 60px 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.course-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background: #fff;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 8px #ccc;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #888;
+}
+
+.enroll-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #198754;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.enroll-btn:hover {
+  background: #0f5132;
+}
+
+/* Contact */
+#contact {
+  padding: 60px 40px;
+}
+
+form {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 120px;
+}
+
+/* Enroll Page */
+.enroll-box {
+  width: 400px;
+  margin: 120px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #ccc;
+  text-align: center;
+}
+body {
+  margin-top: 13vh;
+  padding-bottom: 50px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.hero-section {
+  background-image: linear-gradient(
+    to right bottom,
+    #0d6af6,
+    #0083fd,
+    #0099fb,
+    #00abf4,
+    #12bbeb
+  );
+  position: relative;
+  min-height: 80vh;
+  color: white;
+
+  button {
+    background-color: white;
+    margin-top: 30px;
+  }
+  .section1 {
+    padding-left: 5%;
+  }
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  h2 {
+    margin-top: 14px;
+  }
+}
+
+.formContainer {
+  background-image: linear-gradient(
+    to right bottom,
+    #0d6af6,
+    #0083fd,
+    #0099fb,
+    #00abf4,
+    #12bbeb
+  );
+  min-height: 87vh;
+}
+
+.enrollButton {
+  background-color: white;
+  margin-top: 30px;
+}
+
+#message {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 10px;
+}
+
+.custom-shape-divider-bottom-1765084135 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1765084135 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1765084135 .shape-fill {
+  fill: #ffffff;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  background-color: rgb(73, 167, 243);
+  color: white;
+}
+
+nav button:hover {
+  color: rgb(73, 167, 243) !important;
+}
+
+.hero-section button:hover {
+  color: white !important;
+}
+
+footer {
+  border-top: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}

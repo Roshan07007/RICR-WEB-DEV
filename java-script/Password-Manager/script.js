@@ -62,6 +62,7 @@ function show() {
   row1.appendChild(th3);
   table.appendChild(row1);
 
+  
   data.map((d) => {
     const row = document.createElement("tr");
     const td1 = document.createElement("td");

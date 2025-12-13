@@ -53,14 +53,11 @@ function submit() {
     return;
   }
 
-  if (year === "other
-    ") {
+  if (year === "") {
     console.log("Please select a year");
-}
-else if (/^(19[8-9][0-9]|20[0-9]{2})$/.test(f)) {
+  } else if (/^(19[8-9][0-9]|20[0-9]{2})$/.test(f)) {
     console.log("Valid Year");
-}
-
+  }
 
   const data = {
     a,

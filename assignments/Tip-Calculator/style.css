@@ -1,0 +1,60 @@
+body {
+  background: rgb(155, 155, 227);
+}
+header {
+  min-height: 10vh;
+}
+main {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 50%;
+  min-height: 70vh;
+}
+
+#service {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.572);
+}
+
+.inputDiv {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  i {
+    position: absolute;
+    z-index: 99;
+    color: black;
+    left: 5px;
+  }
+  input {
+    padding-left: 20px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 80%;
+    min-height: 75vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    width: 90%;
+    min-height: 55vh;
+    padding: 30px 10px !important;
+    p,
+    label {
+      font-size: large !important;
+    }
+  }
+}

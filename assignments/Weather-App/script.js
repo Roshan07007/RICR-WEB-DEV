@@ -22,7 +22,7 @@ async function getWeather() {
               data.weather[0].icon
             }@4x.png"
             alt="weatherIcon"
-          />
+          /> 
         </div>`;
   document.getElementById("btn").disabled = false;
 }
@@ -39,5 +39,3 @@ async function geoLocation(city) {
 
   return { lat, lon };
 }
-
-

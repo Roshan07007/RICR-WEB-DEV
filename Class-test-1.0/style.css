@@ -1,13 +1,11 @@
-
-
- *{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-nav{
+nav {
   width: 100%;
   background: black;
   padding: 15px 20px;
@@ -16,44 +14,44 @@ nav{
   z-index: 1000;
 }
 
-nav ul{
+nav ul {
   display: flex;
   list-style: none;
   justify-content: center;
   gap: 30px;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: 600;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   color: orange;
 }
 .about-container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: center;
-    }
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
 
-.hero{
+.hero {
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -63,17 +61,17 @@ nav ul li a:hover{
   text-align: center;
 }
 
-.hero h1{
+.hero h1 {
   font-size: 50px;
   margin-bottom: 15px;
 }
 
-.hero p{
+.hero p {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.hero a{
+.hero a {
   background: black;
   color: white;
   padding: 12px 25px;
@@ -82,7 +80,6 @@ nav ul li a:hover{
   font-size: 18px;
 }
 
-.hero a:hover{
+.hero a:hover {
   background: orange;
 }
-

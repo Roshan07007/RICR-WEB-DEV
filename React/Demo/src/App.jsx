@@ -1,32 +1,54 @@
-import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Footer from "./components/Footer";
+import Header from "./components/header";
+import { motion } from "motion/react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
+import { FaHome } from "react-icons/fa";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+// import Lottie from "lottie-react";
+// import Kuchchi from "./assets/L.json";
+
+import LoginPage from "./pages/loginPage";
 
 function App() {
-  let a = 5;
-  let b = -19;
-  console.log(a + b);
-  const [val, setVal] = useState(0);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation speed
+      easing: "ease-in-out",
+      once: false, // animation only once
+    });
+  }, []);
   return (
     <>
-      <h1>hello</h1>
+      <Header />
 
-      <div className=" absolute left-[50%] -translate-x-[90%]"> {val} </div>
-      <button
-        onClick={() => setVal(val + 1)}
-        className=" ml-90 bg-blue-500 bg-blend-screen  ml-5 px-4 py-2 rounded-xl hover:bg-red-900  cursor-pointer t hover:text-white shadow-2xl"
+      {/* <lottie /> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Products" element={<Products />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+      {/* <Footer /> */}
+
+      <motion.button
+        drag
+        whileHover={{ scale: 2 }}
+        className="text-black bg-amber-500 w-10 h-7 flex items-center gap-1 rounded-2xl border-1  "
       >
-        add
-      </button>
-      <div>
-        <div class="bg-white dark:bg-gray-800">
-          <h1 class="text-gray-900 dark:text-white">Dark mode is here!</h1>
-          <p class="text-gray-600 dark:text-gray-300">hi</p>
-        </div>
-      </div>
-      <div className=" ml-30 text-red-700 ">karan is back</div>
-      <div></div>
-      <h1>hii</h1>
-      <div className="h-52 w-52 border-4 mt-20  hover:rotate-45  animate-spin     absolute left-[50%] -translate-x-[90%] "></div>
+        <FaHome className="text-blue-50" />
+        hiI
+      </motion.button>
+      {/* <Footer/> */}
     </>
   );
 }

@@ -44,6 +44,7 @@ function Submit() {
     if (currentyear - birthyear < 17) {
       document.getElementById("DOBError").innerText =
         "You must be 18 years Old";
+
       return;
     }
   }

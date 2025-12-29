@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const age = 18;
+  let canWatch = "Not Available";
+  if (age >= 18) canWatch = "Availlable";
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <Header />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam
+        est eius! Explicabo atque provident accusamus blanditiis, consequuntur
+        facilis magni.{((<Header />), 8 + 2)}
       </p>
+      <Footer />
+      <Roshan />
+      <button>{age >= 18 ? "Watch Now " : "not Available"}</button>
+      <button>{canWatch}</button>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
+const Roshan = () => {
+  return (
+    <div>
+      <h1>this is alag components </h1>
+    </div>
+  );
+};

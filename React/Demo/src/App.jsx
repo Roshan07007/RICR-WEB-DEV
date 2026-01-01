@@ -44,7 +44,7 @@ function App() {
       </Routes>
       {/* <Footer /> */}
 
-      {/* <motion.button
+      <motion.button
         drag
         whileHover={{ scale: 2 }}
         className="text-black bg-amber-500 w-10 h-7 flex items-center gap-1 rounded-2xl border-1  "
@@ -52,7 +52,7 @@ function App() {
         <FaHome className="text-blue-50" />
         hiI
       </motion.button> */}
-      {/* <Footer/> */}
+      {/* <Footer/>
     </>
   );
 }

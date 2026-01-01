@@ -2,30 +2,26 @@ import React from "react";
 
 const About = () => {
   return (
-    <>
-      <div className="text-center mt-7 ">
-        <div className=" shadow-emerald-600">
-          <h1>login Page</h1>
-          <div className="">
-            <label htmlFor="login">Email</label>
-            <input type="email" className="border-2 ms-5 m-1" />
-            <div>
-              <label htmlFor="password">Password</label>
-              <input type="pasword" className="border-2 ms-3" />
-            </div>
-            <div className="mt-3">
-              <button className="bg-blue-500 m-3 text-white px-2 rounded-2xl">
-                login
-              </button>
-              <button className="bg-red-700  m-3 text-white px-2  rounded-2xl">
-                Reset
-              </button>
-            </div>
-          </div>
-        </div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl text-center border">
+        <h1 className="text-3xl font-bold text-blue-600 mb-4">About Me</h1>
+
+        <p className="text-gray-700 leading-7 text-lg">
+          Hi, I'm <span className="font-semibold text-black">Roshan</span>, a
+          passionate <span className="font-semibold">Web Designer</span> and
+          <span className="font-semibold"> B.Tech CSE Student</span>. I love
+          creating beautiful, responsive, and user-friendly websites. I also
+          create coding content on my YouTube channel and learn full-stack
+          development.
+        </p>
+
+        <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">
+          Contact Me
+        </button>
       </div>
-    </>
-  );
+    </div>
+  
+);
 };
 
 export default About;

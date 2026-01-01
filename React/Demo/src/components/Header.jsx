@@ -14,8 +14,16 @@ const Header = () => {
         >
           Home
         </Link>
+            
         <Link
           to={"/about"}
+          className="text-decoration-none text-white d-flex  justify-between  me-4 mt-4 felx"
+        >
+          About
+        </Link>
+        
+        <Link
+          to={"/LoginPage"}
           className="text-decoration-none text-white d-flex  justify-between  me-4 mt-4 felx"
         >
           Login

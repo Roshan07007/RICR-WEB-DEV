@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const Products = () => {
   return (
-    <div>
-      <h1>this is products</h1>
+    <div className=" text-center">
+      <div className="text-centre text-blue-600 ">
+        <h3>Registration From</h3>
+      </div>
+      <div className="border-2 min-h-screen m-12">
+        
+          
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

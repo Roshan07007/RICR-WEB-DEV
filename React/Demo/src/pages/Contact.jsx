@@ -5,27 +5,35 @@ const Contact = () => {
     fullName: "",
     email: "",
     phone: "",
-    // city: "",
     subject: "",
-    // message: "",
   });
 
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.traget;
+    const { name, value } = e.target;
     setContactData((previousData) => ({ ...previousData, [name]: value }));
   };
 
-  const handleClearForm = () => {};
+  const handleClearForm = () => {
+    setContactData({
+      fullName: "",
+      email: "",
+      phone: "",
+      subject: "",
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+
     try {
       const response = await fetch(
-        "https://official-joke-api.appspot.com/jokes/jhbaskdjbf"
+        "https://official-joke-api.appspot.com/jokes/random"
       );
+      const data = await response.json();
+      console.log("API Response:", data);
     } catch (error) {
       console.log(error.message);
     } finally {
@@ -36,92 +44,81 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-center">
-        <h1>Ragistration</h1>
-        <div className="container">
+      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+        <div className="bg-white w-full max-w-md shadow-lg rounded-2xl p-6 border">
+          <h1 className="text-2xl font-bold text-center mb-5 text-blue-600">
+            Registration Form
+          </h1>
+
           <form onReset={handleClearForm} onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="fullName">Full Name</label>
+            <div className="mb-4">
+              <label className="block text-left font-semibold">Full Name</label>
               <input
                 type="text"
                 name="fullName"
-                id="fullName"
                 value={contactData.fullName}
                 onChange={handleChange}
                 placeholder="Enter your Name"
-                className=" border-2 m-1"
+                className="w-full border p-2 mt-1 rounded-lg focus:ring-2 focus:ring-blue-300"
               />
             </div>
 
-            <div>
-              <label htmlFor="email">Email</label>
+            <div className="mb-4">
+              <label className="block text-left font-semibold">Email</label>
               <input
                 type="email"
                 name="email"
-                id="email"
                 value={contactData.email}
                 onChange={handleChange}
                 placeholder="Enter your Email"
-                className=" border-2 m-1"
+                className="w-full border p-2 mt-1 rounded-lg focus:ring-2 focus:ring-blue-300"
               />
             </div>
 
-            <div>
-              <label htmlFor="phone">Phone</label>
+            <div className="mb-4">
+              <label className="block text-left font-semibold">Phone</label>
               <input
                 type="number"
                 name="phone"
-                id="phone"
                 value={contactData.phone}
                 onChange={handleChange}
-                placeholder="Enter your phone"
-                className=" border-2 m-1"
+                placeholder="Enter your Phone"
+                className="w-full border p-2 mt-1 rounded-lg focus:ring-2 focus:ring-blue-300"
               />
             </div>
 
-            {/* <div>
-              <label htmlFor="city">City</label>
-              <input
-                type="text"
-                name="city"
-                id="city"
-                value={contactData.city}
-                onChange={handleChange}
-                placeholder="Enter your city"
-                className=" border-2 m-1"
-              />
-            </div> */}
-
-            <div>
-              <label htmlFor="subject">conform</label>
+            <div className="mb-4">
+              <label className="block text-left font-semibold">
+                Confirm Password
+              </label>
               <input
                 type="text"
                 name="subject"
-                id="subject"
                 value={contactData.subject}
                 onChange={handleChange}
                 placeholder="Enter your Password"
-                className=" border-2 m-1"
+                className="w-full border p-2 mt-1 rounded-lg focus:ring-2 focus:ring-blue-300"
               />
             </div>
-
-            {/* <div>
-              <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                value={contactData.message}
-                onChange={handleChange}
-                placeholder="Enter your Message"
-                className=" border-2 m-1"
-              ></textarea>
-            </div> */}
             <div>
-              <button type="reset" className="btn btn-danger m-2">
+              <label htmlFor="skill booot"> skill</label>
+              <input type="checkbox" name="checkbox" value="css" /> css
+              <input type="checkbox" />
+            </div>
+
+            <div className="flex justify-between mt-5">
+              <button
+                type="reset"
+                className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+              >
                 Clear
               </button>
-              <button type="submit" className="btn btn-success">
-                {isLoading ? "Loading" : "Submit" }
+
+              <button
+                type="submit"
+                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+              >
+                {isLoading ? "Loading..." : "Submit"}
               </button>
             </div>
           </form>

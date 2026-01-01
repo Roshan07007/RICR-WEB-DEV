@@ -16,7 +16,7 @@ const About = () => {
         </p>
 
         <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">
-          Contact Me
+          Contact Mee
         </button>
       </div>
     </div>

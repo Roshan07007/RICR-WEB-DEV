@@ -16,7 +16,7 @@ const Home = () => {
 
       {/* Button */}
       <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition-all">
-        Get Started
+        Get Startedd
       </button>
     </div>
   );

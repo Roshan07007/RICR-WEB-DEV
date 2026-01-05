@@ -17,7 +17,7 @@ import Lottie from "lottie-react";
 import Kuchchi from "./assets/L.json";
 
 import LoginPage from "./pages/loginPage";
-import { Toaster } from "bootstrap/dist/js/bootstrap.min.js";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useEffect(() => {
@@ -33,26 +33,24 @@ function App() {
 
       {/* <lottie /> */}
 
+      <Toaster />
       <Routes>
-        <Toaster />
-
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/LoginPage" element={<LoginPage />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
 
       <motion.button
         drag
-        whileHover={{ scale: 2 }}
+        whileTap={{scale:2}}
         className="text-black bg-amber-500 w-10 h-7 flex items-center gap-1 rounded-2xl border-1  "
       >
         <FaHome className="text-blue-50" />
-        hiI
-      </motion.button> */}
-      {/* <Footer/>
+      </motion.button>
+      <Lottie animationData={Kuchchi} loop className="h-20 w-39" />
     </>
   );
 }

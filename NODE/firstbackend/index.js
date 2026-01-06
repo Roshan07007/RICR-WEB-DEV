@@ -6,7 +6,7 @@ import express from "express";
 const app = express();
 
 app.get("/", (req, res) => {
-  console.log("karan");
+  console.log("karan ji");
   res.json({message :"do  nothing"});
 });
 

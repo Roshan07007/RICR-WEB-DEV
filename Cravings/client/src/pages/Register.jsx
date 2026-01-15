@@ -81,8 +81,8 @@ const Register = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 py-6 px-4">
-        <div className="max-w-xl mx-auto">
+      <div className="min-h-screen  from-blue-50 to-indigo-100 py-6 px-4 hide-scrollbar">
+        <div className="max-w-xl mx-auto hide-scrollbar">
           {/* Header */}
           <div className="text-center mb-8 flex  justify-center items-center  invert-100 ">
             <img className="w-15  h-15 " src={img2} alt="" />

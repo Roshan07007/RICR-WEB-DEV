@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
-import img2 from "../assets/2.png";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -67,13 +66,14 @@ const Register = () => {
       return;
     }
 
+    console.log(formData)
     try {
       const res = await api.post("/auth/register", formData);
       toast.success(res.data.message);
       handleClearForm();
     } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error(error?.response?.data?.message || "Unknown Error");
     } finally {
       setIsLoading(false);
     }
@@ -81,11 +81,16 @@ const Register = () => {
 
   return (
     <>
-      <div className="min-h-screen  from-blue-50 to-indigo-100 py-6 px-4 hide-scrollbar">
-        <div className="max-w-xl mx-auto hide-scrollbar">
+      <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 py-6 px-4">
+        <div className="max-w-xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8 flex  justify-center items-center  invert-100 ">
-            <img className="w-15  h-15 " src={img2} alt="" />
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+              Registration
+            </h1>
+            <p className="text-lg text-gray-600">
+              You are 1 step away to stop your Cavings
+            </p>
           </div>
 
           {/* Form Container */}

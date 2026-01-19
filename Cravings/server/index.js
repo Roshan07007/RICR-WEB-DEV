@@ -5,6 +5,8 @@ import cors from "cors";
 import morgan from "morgan";
 import connectDB from "./src/config/db.js";
 import AuthRouter from "./src/routers/authRouter.js";
+import publicRouter from "./src/routers/publicRouter.js";
+
 
 const app = express();
 
@@ -13,6 +15,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 app.use("/auth", AuthRouter);
+app.use("/public", publicRouter );
 
 app.get("/", (req, res) => {
   console.log("Server is Working");
@@ -25,8 +28,8 @@ app.use((err, req, res, next) => {
   res.status(StatusCode).json({ message: ErrorMessage });
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.port || 5000;
 app.listen(port, () => {
-  console.log("Server Started at Port: ", port);
-  connectDB();
+  console.log("Server started at port:", port);
 });
+connectDB();

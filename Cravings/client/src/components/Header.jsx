@@ -1,8 +1,10 @@
 import React from "react";
 import tranparentLogo from "../assets/1.png";
 import { Link, useNavigate } from "react-router-dom";
+import { UseAuth } from "../context/AuthContext";
 
-const Header = () => {
+const Header = () => { 
+  const {User, isLogin } = Auth();
   const navigate = useNavigate();
 
   return (

@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
 import { useNavigate } from "react-router-dom";
+import { UseAuth } from "../context/AuthContext";
 
 const Login = () => {
-const navigate = useNavigate()
+  const { setuser, setIsLoading } = UseAuth();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -24,18 +26,17 @@ const navigate = useNavigate()
     });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
 
     console.log(formData);
     try {
       const res = await api.post("/auth/login", formData);
       toast.success(res.data.message);
       handleClearForm();
-      navigate("/user-dashboard")
+      setisLogin(true);
+      navigate("/user-dashboard");
     } catch (error) {
       console.log(error);
       toast.error(error?.response?.data?.message || "Unknown Error");

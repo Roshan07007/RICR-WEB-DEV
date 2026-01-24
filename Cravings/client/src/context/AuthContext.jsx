@@ -1,28 +1,23 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
 
 const AuthContext = React.createContext();
 
+export const AuthProvider = (props) => {
+  const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("CravingUser")) || "");
+  const [isLogin, setIsLogin] = useState(!!user);
 
-   export const AuthProvider = (props) => {
-  const [User, setUser] = useState("");
-  const [isLogin, setIsLogin] = useState(!!User);
+  useEffect(() => {
+    setIsLogin(!!user);
+  }, [user]);
 
-  useEffect(
-    () => {
-      setIsLogin(!!User);
-    },
-    { User },
+  const value = { user, setUser, isLogin, setIsLogin };
+
+  return (
+    <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
   );
-
-  const value = { User, setUser, isLogin, setIsLogin };
-  return {
-  <AuthContext.Provider  value={value} >{props.children </AuthContext.Provider>;
-  };
 };
 
-
-   export const UseAuth = () => {
-    usecontext(AuthContext);
-}
+export const useAuth = () => {
+  return useContext(AuthContext);
+};

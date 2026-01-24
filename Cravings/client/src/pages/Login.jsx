@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
 import { useNavigate } from "react-router-dom";
-import { UseAuth } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
-  const { setuser, setIsLoading } = UseAuth();
+  const { setUser, setIsLogin } = useAuth();
+
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -34,8 +35,10 @@ const Login = () => {
     try {
       const res = await api.post("/auth/login", formData);
       toast.success(res.data.message);
+      setUser(res.data.data);
+      setIsLogin(true);
+      sessionStorage.setItem("CravingUser",JSON.stringify(res.data.data))
       handleClearForm();
-      setisLogin(true);
       navigate("/user-dashboard");
     } catch (error) {
       console.log(error);
@@ -51,9 +54,9 @@ const Login = () => {
         <div className="max-w-xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            {/* <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Welcome Back
-            </h1> */}
+            </h1>
             {/* <p className="text-lg text-gray-600">
               You are 1 step away to stop your Cavings
             </p> */}

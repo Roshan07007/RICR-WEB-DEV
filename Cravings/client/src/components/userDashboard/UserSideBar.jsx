@@ -24,10 +24,10 @@ const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
       <div className="p-2">
         <div className="h-10 text-xl font-bold flex gap-5 items-center mb-3">
           <button
-            className="ms-2 hover:scale-105"
+            className="ms-2 hover:scale-105 "
             onClick={() => setIsCollapsed(!isCollapsed)}
           >
-            <GiHamburgerMenu />
+            <GiHamburgerMenu  />
           </button>{" "}
           {!isCollapsed && (
             <span className="overflow-hidden text-nowrap">User Dashboard</span>

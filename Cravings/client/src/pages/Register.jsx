@@ -41,7 +41,7 @@ const Register = () => {
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-        formData.email
+        formData.email,
       )
     ) {
       Error.email = "Use Proper Email Format";
@@ -66,7 +66,7 @@ const Register = () => {
       return;
     }
 
-    console.log(formData)
+    console.log(formData);
     try {
       const res = await api.post("/auth/register", formData);
       toast.success(res.data.message);

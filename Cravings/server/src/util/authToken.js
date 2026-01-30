@@ -1,16 +1,14 @@
 import jwt from "jsonwebtoken";
 
-
-  export  const genAdminToken = (user, res) => {
-
+export const genAdminToken = (user, res) => {
   try {
     console.log("hjgwdf");
-    
+
     const payload = {
       id: user._id,
       role: user.role || "admin",
     };
-    const token = jwt.sign(payload,process.env.jwt_secret, {
+    const token = jwt.sign(payload, process.env.jwt_secret, {
       expiresIn: "1d",
     });
     console.log(token);
@@ -24,5 +22,3 @@ import jwt from "jsonwebtoken";
     throw error;
   }
 };
-
-

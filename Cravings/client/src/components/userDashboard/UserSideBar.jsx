@@ -5,6 +5,9 @@ import { TiShoppingCart } from "react-icons/ti";
 import { TbTransactionRupee } from "react-icons/tb";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdLogout } from "react-icons/md";
+
+
 
 const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
   const menuItems = [
@@ -21,7 +24,8 @@ const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
 
   return (
     <>
-      <div className="p-2">
+   <div className="">
+       <div className="p-2">
         <div className="h-10 text-xl font-bold flex gap-5 items-center mb-3">
           <button
             className="ms-2 hover:scale-105 "
@@ -54,7 +58,15 @@ const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
             </button>
           ))}
         </div>
+        <div>
+          <button className="flex gap-3 items-center hover:bg-gray-100/70 text-red-600 text-lg ps-2 rounded-xl h-9 w-full text-nowrap overflow-hidden duration-300">
+            <MdLogout />
+
+            <a href="http://localhost:5173/login">logout</a>
+          </button>
+        </div>
       </div>
+   </div>
     </>
   );
 };

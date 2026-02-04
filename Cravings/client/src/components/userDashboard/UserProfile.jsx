@@ -16,7 +16,7 @@ const UserProfile = () => {
   const changePhoto = async (photo) => {
     const form_Data = new FormData();
        
-    // console.log("Printing photo", photo);
+    
 
     form_Data.append("image", photo);
     // form_Data.append("imageURL", preview);
